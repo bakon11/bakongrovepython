@@ -17,7 +17,9 @@ grovepi.pinMode(sensor,"INPUT")
 time.sleep(1)
 
 # Reference voltage of ADC is 5v
-adc_ref = 5
+adc_ref = 5.0
+k = -19.18518519
+offset = 41.02740741 
 
 while True:
     try:
@@ -25,9 +27,10 @@ while True:
         sensor_value = grovepi.analogRead(sensor)
 
         # Calculate PH
-        ph = -19.18518519 * (float)(sensor_value) * adc_ref / 1024 + 41.02740741
+        voltage = sensor_value * adc_ref / 1024
+        ph = k * voltage + offset
 
-        print("sensor_value =", sensor_value, " ph =", ph)
+        print("voltage =", voltage, " ph =", ph)
 
     except IOError:
         print ("Error")
