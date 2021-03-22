@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# GrovePi Example for using the Grove PH Sensor (http://www.seeedstudio.com/wiki/Grove_-_PH_Sensor)
+# GrovePi Example for using the Grove PH Sensor Kit (E-201C-Blue ) (https://www.seeedstudio.com/Grove-PH-Sensor-Kit-E-201C-Blue-p-4577.html)
 #
 # The GrovePi connects the Raspberry Pi and Grove sensors.  You can learn more about GrovePi here:  http://www.dexterindustries.com/GrovePi
 #
